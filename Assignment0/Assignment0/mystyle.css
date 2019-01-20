@@ -1,0 +1,31 @@
+.navbar-color{
+	background-color: #C792F0;
+	color: #C792F0;
+	
+}
+.text-color:hover {
+
+	text-color: #C792F0;
+	background-color: #811CCE;
+}
+.background {
+	background-color: #C792F0;
+}
+.backgroundI {
+	background-image: url("images/pizza1.jpg")
+}
+.example {
+  background-image: url('images/pizza1.jpg');
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+.content {
+	min-height: 200px;
+}
+.contentTwo {
+	min-height: 50px;
+}
+.clear {
+	
+}
+
