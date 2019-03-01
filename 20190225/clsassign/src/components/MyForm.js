@@ -1,7 +1,8 @@
-import React, {Component} from "react";
-import Email from "./components/Email.js";
-import Password from "./components/Password.js";
-import Button from "./components/Button.js";
+import React, {Component} from 'react';
+import Email from '../components/Email.js';
+import Password from '../components/Password.js';
+import Button from '../components/Button.js';
+
 
 class MyForm extends Component {
     constructor(props){
@@ -10,11 +11,14 @@ class MyForm extends Component {
 
         this.state = {
             email: '',
-            password:''
+            password: '',
+            results:''
+            
             
         }
 
         this.onEmailChange = this.onEmailChange.bind(this);
+        this.onPWChange = this.onPWChange.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
     }
 
@@ -28,6 +32,18 @@ class MyForm extends Component {
         });
     }
 
+    handleFormSubmit(results){
+
+        const formresults = results;
+        
+        this.setState( () => {
+                return {
+                    formresults
+                };
+            }
+        );
+    }
+
     onSubmit(event){
         event.preventDefault();
 
@@ -36,7 +52,9 @@ class MyForm extends Component {
             return {
                 results
             };
+            
         })
+        this.props.onFormSubmit(results);
     }
     onPWChange(password){         
                
@@ -51,13 +69,20 @@ class MyForm extends Component {
 
 // {/* <Button onFormSubmit={this.onSubmit}/> */}
 // <form onSubmit={this.onSubmit}>
+//<Email onEmailInputChange={this.onEmailChange}/>
+// <Password onPWInputChange={this.onPWChange}/>    
 
     render() { 
         return ( 
             <div>
-                <form >
-                <Email onEmailInputChange={this.onEmailChange}/>
-                <Password onPWInputChange={this.onPWChange}/>             
+                <form onSubmit={this.onSubmit}>
+                
+                 <Email onEmailInputChange={this.onEmailChange} />  
+                 <Password onPwInputChange={this.onPWChange}/>
+                 <Button  onFormSubmit={this.onSubmit}/>  
+                 <div>
+                   
+                </div>
                 
                 
                 </form>

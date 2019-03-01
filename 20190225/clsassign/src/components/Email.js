@@ -33,8 +33,9 @@ class Email extends Component {
         return ( 
             <div className="form-group">
              <label for="exampleInputEmail1">Email address</label>
-                <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" value={this.state.email} onChange={this.onEmailChange}></input>
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" 
+                                                                                    value={this.state.email} onChange={this.onEmailChange}></input>
+                
             </div>
           );
     }
