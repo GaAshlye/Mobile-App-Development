@@ -17,6 +17,7 @@ class Button extends Component {
                 results
             };
         })
+        this.props.onFormSubmit(results);
 
     };
 

@@ -16,7 +16,7 @@ onPWChange(event){
     const password = event.target.value;
 
         //lift the state value to parent (form)
-        this.props.onPwInputChange(password); //need to call onEmailInputChange in parent
+        this.props.onPwInputChange(password); //need to call onPWInputChange in parent
 
 
         this.setState( () =>{
