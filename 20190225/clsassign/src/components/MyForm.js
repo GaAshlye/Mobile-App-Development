@@ -74,18 +74,24 @@ class MyForm extends Component {
 
     render() { 
         return ( 
-            <div>
-                <form onSubmit={this.onSubmit}>
+            <div className="bg-light">
+            
+           
+
+
+                 <section className="py-5 ">
+                 <div className="container background">
+                <form className="form-group" onSubmit={this.onSubmit}>
                 
-                 <Email onEmailInputChange={this.onEmailChange} />  
+                 <Email className = "text-center"onEmailInputChange={this.onEmailChange} />  
                  <Password onPwInputChange={this.onPWChange}/>
                  <Button  onFormSubmit={this.onSubmit}/>  
-                 <div>
-                   
-                </div>
-                
+                 
                 
                 </form>
+                </div>
+                </section>
+                
 
 
 
